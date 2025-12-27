@@ -1,22 +1,21 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import localFont from "next/font/local";
+import type { Metadata } from 'next';
+import './globals.css';
+import localFont from 'next/font/local';
 
 export const pretendard = localFont({
   src: [
-    { path: "./fonts/Pretendard-Regular.subset.woff2", weight: "400" },
-    { path: "./fonts/Pretendard-Medium.subset.woff2", weight: "500" },
-    { path: "./fonts/Pretendard-SemiBold.subset.woff2", weight: "600" },
+    { path: './fonts/Pretendard-Regular.subset.woff2', weight: '400' },
+    { path: './fonts/Pretendard-Medium.subset.woff2', weight: '500' },
+    { path: './fonts/Pretendard-SemiBold.subset.woff2', weight: '600' },
   ],
-  display: "swap",
+  display: 'swap',
 });
 
-
 export const metadata: Metadata = {
-  title: "한국 경제 지표 계기판",
-  description: "국채 금리, 환율, 외환보유액 등 핵심 지표로 한국 경제 흐름을 빠르게 파악하는 대시보드",
+  title: '한국 경제 지표 계기판',
+  description:
+    '국채 금리, 환율, 외환보유액 등 핵심 지표로 한국 경제 흐름을 빠르게 파악하는 대시보드',
 };
-
 
 export default function RootLayout({
   children,
@@ -26,9 +25,13 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body
-      className={`${pretendard.className} antialiased`}
+        className={`${pretendard.className} suppressHydrationWarning antialiased`}
       >
-        {children}
+        <div className="min-h-dvh bg-neutral-50">
+          <main className="min-h-dvh w-full bg-white lg:mx-auto lg:max-w-md">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
