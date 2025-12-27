@@ -3,11 +3,9 @@ import DashboardMetrics from './components/DashboardMetrics';
 
 export default function DashboardPage() {
   return (
-    <>
+    <div className="space-y-6 px-4 py-6">
       <DashboardHeader />
-      <section>
-        <DashboardMetrics />
-      </section>
-    </>
+      <DashboardMetrics />
+    </div>
   );
 }
