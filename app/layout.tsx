@@ -27,8 +27,8 @@ export default function RootLayout({
       <body
         className={`${pretendard.className} suppressHydrationWarning antialiased`}
       >
-        <div className="min-h-dvh bg-neutral-50">
-          <main className="min-h-dvh w-full bg-white lg:mx-auto lg:max-w-md">
+        <div className="bg-neutral-50">
+          <main className="relative min-h-dvh w-full overflow-x-hidden bg-neutral-900 lg:mx-auto lg:max-w-md">
             {children}
           </main>
         </div>
